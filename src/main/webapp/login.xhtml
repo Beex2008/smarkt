@@ -15,19 +15,10 @@
 	
 </h:head>
 	<h:body>
-	 
-	 <div class="box">
-	 	<h3>Suche nach ...</h3>
-	 	<h:form>  
-	 	<h:inputText id="text" label="#{i18n['text-field']}"
-			required="#{showcaseModelBean.selectedComponent.required}" value="#{inputTextModelBean.text}" />
-	 	<h:selectOneMenu value = "#{userData.data}"> 
-		   <f:selectItem itemValue = "1" itemLabel = "Elektronik" /> 
-		   <f:selectItem itemValue = "2" itemLabel = "Notebook " /> 
-		</h:selectOneMenu> 
-		<h:button includeViewParams="true" 
-			value="suche" /> 
-		</h:form>
-	 </div>
+		<h1>Login</h1>
+    	<h:form>
+    	   <h:inputText value="#{Login.username}" />
+    	   <h:commandButton value="login" action="#{Login.checkBean}" />
+    	</h:form>
 	</h:body>
 </h:html>

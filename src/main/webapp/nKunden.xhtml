@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<h:html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:c="http://java.sun.com/jsp/core">
+    <h:head>
+	 <title>Welcome</title>
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	 <link rel="stylesheet" href="resources/style.css" type="text/css"/>  
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+	 <h:outputScript library="js" name="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js" />
+	 <h:outputScript library="js" name="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" />	
+</h:head>
+	<h:body> 
+		
+		<div class="container">
+	    <h:form>
+	    	<h:outputLabel for="username"> Username</h:outputLabel>
+	    	<h:inputText value="#{neuKunden.username}" />
+	    	<h:message for="username" styleClass="errorBlock" />
+	    	
+	    	<h:outputLabel for="email"> Email</h:outputLabel>
+	    	<h:inputText value="#{neuKunden.email}" />
+	    	<h:message for="email" styleClass="errorBlock" />
+	    	
+	    	<h:outputLabel for="vorname"> vorrname</h:outputLabel>
+	    	<h:inputText value="#{neuKunden.vorname}" />
+	    	<h:message for="vorname" styleClass="errorBlock" />
+	    	
+	    	<h:outputLabel for="nachname"> nachrname</h:outputLabel>
+	    	<h:inputText value="#{neuKunden.nachname}" />
+	    	<h:message for="nachname" styleClass="errorBlock" />
+	    	
+	    	<h:outputLabel for="passwort"> Passwort</h:outputLabel>
+	    	<h:inputText value="#{neuKunden.passwort}" />
+	    	<h:message for="passwort" styleClass="errorBlock" />
+	    	
+	    	<h:outputLabel for="repasswort"> Re-Passwort</h:outputLabel>
+	    	<h:inputText value="#{neuKunden.passwort}" />
+	    	<h:message for="repasswort" styleClass="errorBlock" />
+	    	
+	    	
+	    	<h:commandButton action="Anlegen" value="#" />
+	    	    	
+	    </h:form>
+	    </div>
+	</h:body>
+</h:html>
