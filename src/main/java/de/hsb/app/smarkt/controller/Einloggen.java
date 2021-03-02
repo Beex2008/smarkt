@@ -1,11 +1,14 @@
 package de.hsb.app.smarkt.controller;
 
-import javax.inject.Named;
+import javax.enterprise.context.ApplicationScoped;
+import javax.faces.annotation.FacesConfig;
+import javax.faces.bean.ManagedBean;
 
 import de.hsb.app.smarkt.modell.Login;
 
-//@ManagedBean
-@Named
+@ApplicationScoped
+@FacesConfig(version = FacesConfig.Version.JSF_2_3) // CDI Aktivieren
+@ManagedBean
 public class Einloggen {
 	private Login loginBean;
 	private String loginE;
@@ -16,13 +19,21 @@ public class Einloggen {
 
 	public Login getLoginBean() {
 		if(loginBean != null) {
-	         loginE = loginBean.getUsername();
+	         setLoginE(loginBean.getUsername());
 	      }  
 		return loginBean;
 	}
 
 	public void setLoginBean(Login loginBean) {
 		this.loginBean = loginBean;
+	}
+
+	public String getLoginE() {
+		return loginE;
+	}
+
+	public void setLoginE(String loginE) {
+		this.loginE = loginE;
 	}
 	
 	
