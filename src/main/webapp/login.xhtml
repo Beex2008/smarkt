@@ -1,24 +1,32 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//DE" 
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <h:html xmlns="http://www.w3.org/1999/xhtml"
-    xmlns:ui="http://java.sun.com/jsf/facelets"
-    xmlns:h="http://java.sun.com/jsf/html"
-    xmlns:f="http://java.sun.com/jsf/core"
-    xmlns:c="http://java.sun.com/jsp/core">
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:c="http://java.sun.com/jsp/core">
 <h:head>
-	 <title>Welcome</title>
-	 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-	 <link rel="stylesheet" href="style.css" type="text/css"/>  
-	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
-	 <h:outputScript library="js" name="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js" />
-	 <h:outputScript library="js" name="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" />
-	
+	<title>Welcome</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="resources/style.css" type="text/css" />
+	<link rel="stylesheet"
+		href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
 </h:head>
-	<h:body>
-		<h1>Login</h1>
-    	<h:form>
-    	   <h:inputText value="#{Login.username}" />
-    	   <h:commandButton value="login" action="#{Login.checkBean}" />
-    	</h:form>
-	</h:body>
+<h:body>
+	<h2>Ajax Example</h2>
+
+	<h:form>
+		<h:inputText id="username" value="#{login.username}"></h:inputText>
+		<h:commandButton value="Show Message">
+			<f:ajax execute="username" render="outputMessage" />
+		</h:commandButton>
+		<h2>
+			<h:outputText id="outputMessage"
+				value="#{login.welcomeMessage != null ?
+            login.welcomeMessage : ''}" />
+		</h2>
+	</h:form>
+	<div class="grid-container"></div>
+
+</h:body>
 </h:html>

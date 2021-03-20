@@ -66,7 +66,18 @@
 			<artifactId>javax.inject</artifactId>
 			<version>1</version>
 		</dependency>
-
+		<dependency>
+			<groupId>javax.enterprise</groupId>
+			<artifactId>cdi-api</artifactId>
+			<version>1.2</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>net.bootsfaces</groupId>
+			<artifactId>bootsfaces</artifactId>
+			<version>1.5.0</version>
+			<scope>compile</scope>
+		</dependency>
 		<!-- You would add -->
 
 		<dependency>
